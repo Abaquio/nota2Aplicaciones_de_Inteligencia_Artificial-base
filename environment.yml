@@ -1,0 +1,54 @@
+name: app_ml
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9 
+  - numpy
+  - pandas
+  - scikit-learn
+  - scipy
+  - pip:
+    # AÑADE EL RESTO DE TU requirements.txt AQUI:
+    - asgiref==3.8.1
+    - babel==2.17.0
+    - Django==4.2.20
+    - django-appconf==1.1.0
+    - django-browser-reload==1.18.0
+    - django-compressor==4.5.1
+    - django-htmx==1.23.2
+    - django-tailwind==3.4.0
+    - djangorestframework==3.16.1
+    - et_xmlfile==2.0.0
+    - gunicorn==23.0.0
+    - joblib==1.5.2
+    - mysqlclient==2.2.7
+    - numpy==2.0.2
+    - openpyxl==3.1.5
+    - packaging==25.0
+    - pandas==2.3.3
+    - pygame==2.6.1
+    - python-dateutil==2.9.0.post0
+    - pytz==2025.2
+    - rcssmin==1.1.2
+    - rjsmin==1.2.2
+    - scikit-learn==1.6.1
+    - scipy==1.13.1
+    - six==1.17.0
+    - sqlparse==0.5.3
+    - threadpoolctl==3.6.0
+    - typing_extensions==4.13.2
+    - tzdata==2025.2
+    - dj-database-url
+    - psycopg2-binary
+    - whitenoise
+    - asgiref
+    - babel
+    - Django
+    - djangorestframework
+    - gunicorn
+    - joblib
+    - dj-database-url
+    - psycopg2-binary
+    - whitenoise
+    # ... (Asegúrate de que todas tus librerías no ML también estén aquí)
