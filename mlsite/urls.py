@@ -3,18 +3,10 @@ from django.urls import path, include
 from django.http import HttpResponse
 
 def home(_request):
-    # Página simple para comprobar que el backend responde
-    return HttpResponse(
-        "<h2>Servidor Django activo 🚀</h2><p>OK / Render</p>",
-        content_type="text/html",
-    )
-
-def health(_request):
-    return HttpResponse("OK", content_type="text/plain")
+    return HttpResponse("<h2>Servidor Django activo 🚀</h2><p>OK / Render</p>")
 
 urlpatterns = [
-    path("", home, name="home"),            # ✅ evita 500 en la raíz
-    path("health/", health, name="health"), # para monitoreo si quieres
+    path("", home, name="home"),       # evita 500/404 en la raíz
     path("admin/", admin.site.urls),
-    path("api/", include("ml.urls")),       # ✅ monta las rutas del app ml bajo /api/
+    path("api/", include("ml.api")),   # monta los endpoints del archivo api.py
 ]
