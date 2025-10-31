@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 import os
 from pathlib import Path
+import mlsite
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,6 +25,7 @@ SECRET_KEY = 'django-insecure-%^cw5r8be*$0=x0w^%u0i!8l6@p5pd7ofb8%osu_tjswts%t@_
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+DJANGO_SETTINGS_MODULE=mlsite.settings
 
 ALLOWED_HOSTS = ['matiassepulvedagon.pythonanywhere.com','127.0.0.1']
 
