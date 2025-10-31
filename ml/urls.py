@@ -1,9 +1,11 @@
 from django.urls import path
-from . import views
+from . import api  # asumiendo que tus endpoints están en ml/api.py
+
+app_name = "ml"
 
 urlpatterns = [
-    path("", views.home, name="home"),
-    path("insurance/", views.insurance_view, name="insurance"),
-    path("diabetes/", views.diabetes_view, name="diabetes"),
-    path("rf-report/", views.rf_report_view, name="rf_report"),
+    # Diabetes (clasificación)
+    path("predict/diabetes", api.predict_diabetes, name="predict_diabetes"),
+    # Costos de seguro (regresión)
+    path("predict/insurance", api.predict_insurance, name="predict_insurance"),
 ]

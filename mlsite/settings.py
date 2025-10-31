@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
+    "ml",
     # agrega aquí tus apps si las tienes (por ejemplo "diabetes", "insurance")
 ]
 
